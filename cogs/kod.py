@@ -11,8 +11,15 @@ class Kod(commands.Cog):
         print(f"{__name__} jest online.")
 
     @app_commands.command(name="kod", description="Link do kodu źródłowego.")
-    async def czesc(self, interaction: discord.Interaction):
-        await interaction.response.send_message(f"{interaction.user.mention} kod źródłowy dostępny jest tutaj: https://github.com/Ferb2004/kaczogrod-bot", ephemeral=True)
+    async def kod(self, interaction: discord.Interaction):
+        embed = discord.Embed(
+            colour=0xffffff
+        )
+        embed.set_author(name="Github",
+                         url="https://github.com/Ferb2004/kaczogrod-bot",
+                         icon_url="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png")
+
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 
