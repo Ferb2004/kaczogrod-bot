@@ -19,7 +19,7 @@ class Kod(commands.Cog):
                          url="https://github.com/Ferb2004/kaczogrod-bot",
                          icon_url="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png")
 
-        await interaction.response.send_message(embed=embed, ephemeral=True)
+        await interaction.response.send_message(embed=embed)
 
 
 
