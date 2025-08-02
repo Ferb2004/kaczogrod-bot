@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
+
 class Ping(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -17,7 +18,10 @@ class Ping(commands.Cog):
             color=discord.Color.green()
         )
         embed.set_author(name="Ping")
+
         await interaction.response.send_message(embed=embed)
+
+
 
 async def setup(bot):
     await bot.add_cog(Ping(bot))
